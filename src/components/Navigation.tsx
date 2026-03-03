@@ -54,7 +54,7 @@ export default function Navigation() {
         {/* LOGO */}
         <Link href="/" className="flex items-center group">
           <motion.img 
-            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/6af9b26c-8ed3-40f3-9e42-9cb554431e81/Gemini_Generated_Image_qddqdzqddqdzqddq-1769454284267.png?width=8000&height=8000&resize=contain" 
+            src="/images/logo_piccolo.jpg" 
             alt="Minerva Partners Logo" 
             className="h-10 w-auto object-contain brightness-100 contrast-100"
             whileHover={{ scale: 1.05 }}

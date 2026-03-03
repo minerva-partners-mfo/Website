@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "Bash(npx next:*)",
+      "Bash(curl:*)",
+      "Bash(rm:*)",
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)",
+      "Bash(xargs grep:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(NODE_OPTIONS=\"--max-old-space-size=4096\" npx next:*)",
+      "Bash(NODE_OPTIONS=\"--max-old-space-size=4096\" npm run:*)",
+      "Bash(npx kill-port:*)",
+      "Bash(node:*)"
+    ]
+  }
+}

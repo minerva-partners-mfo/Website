@@ -17,8 +17,7 @@ const config: Config = {
         }
       },
       fontFamily: {
-        titles: ["Stratford Serial", "serif"],
-        serif: ["var(--font-serif)", "serif"],
+        titles: ["var(--font-titles)", "serif"],
         sans: ["var(--font-sans)", "sans-serif"],
       },
     },

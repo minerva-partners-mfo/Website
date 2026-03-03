@@ -36,7 +36,7 @@ const ServiceCard = ({
         <h3 className="font-display text-[42px] leading-[1.1] text-primary mb-10">
           {title}
         </h3>
-        <p className="font-body text-[16px] leading-[1.6] text-primary/80 font-light max-w-[280px]">
+        <p className="font-sans text-[16px] leading-[1.6] text-primary/80 font-light max-w-[280px]">
           {description}
         </p>
       </div>
@@ -66,7 +66,7 @@ const DistinctSolutions = () => {
           </div>
           
           <div className="pt-4">
-            <p className="font-body text-[18px] leading-[1.7] text-[#666] font-light max-w-[560px]">
+            <p className="font-sans text-[18px] leading-[1.7] text-[#666] font-light max-w-[560px]">
               We serve families and individuals, institutional investors, and corporations across a 
               wide range of needs and objectives. We continue to learn from our heritage and seek out 
               new and innovative ways of working, using our past success to help us continue 

@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minerva Partners | Multiclient Family Office</title>
+  <meta name="description" content="Minerva Partners - Multiclient Family Office. Diamo ordine alla complessità, abilitiamo valore per famiglie imprenditoriali e UHNWI.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ═══════════════════════════════════════════════════════════════════════════
+       CSS RESET & BASE
+       ═══════════════════════════════════════════════════════════════════════════ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Colors */
+      --navy-deep: #1A2A3A;
+      --navy-medium: #2A3A4A;
+      --gold-warm: #C5A86C;
+      --gold-light: #D4B87C;
+      --cream: #F8F6F1;
+      --white-off: #FDFCFA;
+      --gray-cool: #5A6A7A;
+      --gray-light: #8A9AAA;
+      
+      /* Typography */
+      --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      
+      /* Spacing */
+      --section-padding: 120px;
+      --container-max: 1200px;
+      
+      /* Transitions */
+      --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-fast: all 0.2s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--cream);
+      color: var(--navy-deep);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background-color: rgba(197, 168, 108, 0.3);
+      color: var(--navy-deep);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--navy-deep);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold-warm);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold-light);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       UTILITY CLASSES
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: var(--section-padding) 0;
+    }
+
+    .section--dark {
+      background-color: var(--navy-deep);
+      color: var(--cream);
+    }
+
+    .section--light {
+      background-color: var(--white-off);
+    }
+
+    .text-gold { color: var(--gold-warm); }
+    .text-cream { color: var(--cream); }
+    .text-gray { color: var(--gray-cool); }
+
+    .hidden { display: none !important; }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       TYPOGRAPHY
+       ═══════════════════════════════════════════════════════════════════════════ */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .heading-xl {
+      font-size: clamp(40px, 6vw, 72px);
+      letter-spacing: -0.02em;
+    }
+
+    .heading-lg {
+      font-size: clamp(32px, 4vw, 56px);
+    }
+
+    .heading-md {
+      font-size: clamp(24px, 3vw, 40px);
+    }
+
+    .heading-sm {
+      font-size: clamp(20px, 2vw, 28px);
+    }
+
+    .text-lg {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .text-sm {
+      font-size: 14px;
+    }
+
+    .text-xs {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-warm);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       BUTTONS
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn--primary {
+      background-color: var(--gold-warm);
+      color: var(--navy-deep);
+    }
+
+    .btn--primary:hover {
+      background-color: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(197, 168, 108, 0.4);
+    }
+
+    .btn--outline {
+      background-color: transparent;
+      color: var(--cream);
+      border: 1px solid rgba(248, 246, 241, 0.3);
+    }
+
+    .btn--outline:hover {
+      background-color: rgba(248, 246, 241, 0.1);
+      border-color: rgba(248, 246, 241, 0.5);
+    }
+
+    .btn--outline-gold {
+      background-color: transparent;
+      color: var(--gold-warm);
+      border: 1px solid var(--gold-warm);
+    }
+
+    .btn--outline-gold:hover {
+      background-color: var(--gold-warm);
+      color: var(--navy-deep);
+    }
+
+    .btn--large {
+      padding: 18px 40px;
+      font-size: 16px;
+    }
+
+    .btn__icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      transition: var(--transition-smooth);
+    }
+
+    .header--scrolled {
+      background-color: rgba(26, 42, 58, 0.98);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(197, 168, 108, 0.2);
+    }
+
+    .header__inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .header__logo-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .header__logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header__logo-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gold-warm);
+      letter-spacing: 0.1em;
+    }
+
+    .header__logo-subtitle {
+      font-size: 9px;
+      color: rgba(248, 246, 241, 0.6);
+      letter-spacing: 0.15em;
+      margin-top: 2px;
+    }
+
+    .header__nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .header__nav-item {
+      position: relative;
+    }
+
+    .header__nav-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--cream);
+      cursor: pointer;
+      transition: var(--transition-fast);
+      background: none;
+      border: none;
+      font-family: inherit;
+    }
+
+    .header__nav-link:hover {
+      color: var(--gold-warm);
+    }
+
+    .header__nav-link svg {
+      transition: transform 0.3s;
+    }
+
+    .header__nav-item:hover .header__nav-link svg {
+      transform: rotate(180deg);
+    }
+
+    .header__mega-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 16px;
+      min-width: 320px;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-fast);
+    }
+
+    .header__nav-item:hover .header__mega-menu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .header__mega-menu-inner {
+      background-color: var(--navy-deep);
+      border: 1px solid rgba(197, 168, 108, 0.2);
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .header__mega-menu-item {
+      display: block;
+      padding: 16px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    .header__mega-menu-item:hover {
+      background-color: rgba(197, 168, 108, 0.1);
+    }
+
+    .header__mega-menu-label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+
+    .header__mega-menu-desc {
+      display: block;
+      font-size: 13px;
+      color: rgba(248, 246, 241, 0.5);
+    }
+
+    .header__actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header__reserved-btn {
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--cream);
+      background-color: transparent;
+      border: 1px solid rgba(248, 246, 241, 0.3);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .header__reserved-btn:hover {
+      border-color: var(--gold-warm);
+      color: var(--gold-warm);
+    }
+
+    .header__menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .header__menu-bar {
+      width: 24px;
+      height: 2px;
+      background-color: var(--cream);
+      transition: var(--transition-fast);
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--navy-deep);
+      padding: 24px;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+      z-index: 999;
+    }
+
+    .mobile-nav--open {
+      transform: translateX(0);
+    }
+
+    .mobile-nav__group {
+      margin-bottom: 32px;
+    }
+
+    .mobile-nav__title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gold-warm);
+      margin-bottom: 16px;
+    }
+
+    .mobile-nav__item {
+      display: block;
+      padding: 12px 0;
+      padding-left: 16px;
+      font-size: 14px;
+      color: rgba(248, 246, 241, 0.7);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(248, 246, 241, 0.1);
+    }
+
+    @media (max-width: 1024px) {
+      .header__nav,
+      .header__actions {
+        display: none;
+      }
+      
+      .header__menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-medium) 50%, var(--navy-deep) 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26, 42, 58, 0.95) 0%, rgba(26, 42, 58, 0.85) 100%);
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+      padding: 0 24px;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero__tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .hero__tag-text {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gold-warm);
+      letter-spacing: 0.2em;
+    }
+
+    .gold-line {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-warm), transparent);
+    }
+
+    .hero__title {
+      font-size: clamp(36px, 5vw, 64px);
+      color: var(--cream);
+      margin-bottom: 24px;
+    }
+
+    .hero__title-accent {
+      color: var(--gold-warm);
+      font-style: italic;
+    }
+
+    .hero__subtitle {
+      font-size: 18px;
+      color: rgba(248, 246, 241, 0.7);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .hero__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+    }
+
+    .hero__stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .hero__stat {
+      text-align: center;
+    }
+
+    .hero__stat-value {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--gold-warm);
+    }
+
+    .hero__stat-label {
+      display: block;
+      font-size: 12px;
+      color: rgba(248, 246, 241, 0.5);
+      margin-top: 4px;
+    }
+
+    .hero__stat-divider {
+      width: 1px;
+      height: 40px;
+      background-color: rgba(248, 246, 241, 0.2);
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(248, 246, 241, 0.5);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      z-index: 2;
+      animation: fadeInUp 1s ease-out 1s both;
+    }
+
+    .hero__scroll-line {
+      width: 1px;
+      height: 40px;
+      background-color: rgba(248, 246, 241, 0.3);
+      animation: scrollPulse 2s ease infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.2); }
+    }
+
+    @media (max-width: 768px) {
+      .hero__stats {
+        flex-direction: column;
+        gap: 24px;
+      }
+      
+      .hero__stat-divider {
+        display: none;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       SECTION HEADER
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-header__tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--gold-warm);
+      margin-bottom: 16px;
+    }
+
+    .section-header__title {
+      font-size: clamp(32px, 4vw, 48px);
+      margin-bottom: 16px;
+    }
+
+    .section-header__subtitle {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--gray-cool);
+    }
+
+    .section--dark .section-header__subtitle {
+      color: rgba(248, 246, 241, 0.7);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       PILLARS SECTION
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .pillar-card {
+      padding: 40px;
+      background-color: white;
+      border: 1px solid rgba(26, 42, 58, 0.1);
+      border-radius: 8px;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(26, 42, 58, 0.15);
+      border-color: rgba(197, 168, 108, 0.3);
+    }
+
+    .pillar-card__icon {
+      margin-bottom: 24px;
+    }
+
+    .pillar-card__icon svg {
+      width: 48px;
+      height: 48px;
+      stroke: var(--gold-warm);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .pillar-card__title {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 16px;
+    }
+
+    .pillar-card__desc {
+      font-size: 15px;
+      color: var(--gray-cool);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       TIMELINE SECTION
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 48px;
+    }
+
+    .timeline__line {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold-warm) 0%, rgba(197, 168, 108, 0.2) 100%);
+    }
+
+    .timeline__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 48px;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: var(--transition-smooth);
+    }
+
+    .timeline__item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .timeline__step {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--gold-warm);
+      color: var(--navy-deep);
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-left: -48px;
+    }
+
+    .timeline__content {
+      flex: 1;
+    }
+
+    .timeline__title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .timeline__desc {
+      font-size: 15px;
+      color: rgba(248, 246, 241, 0.7);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       SERVICES GRID
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      padding: 32px;
+      border: 1px solid rgba(26, 42, 58, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      position: relative;
+      background-color: var(--cream);
+    }
+
+    .service-card--featured {
+      background-color: var(--navy-deep);
+      border-color: var(--gold-warm);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(26, 42, 58, 0.12);
+    }
+
+    .service-card__title {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .service-card--featured .service-card__title {
+      color: var(--gold-warm);
+    }
+
+    .service-card__subtitle {
+      font-size: 13px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .service-card--featured .service-card__subtitle {
+      color: var(--cream);
+    }
+
+    .service-card__list {
+      list-style: none;
+    }
+
+    .service-card__item {
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+      color: var(--gray-cool);
+    }
+
+    .service-card--featured .service-card__item {
+      color: rgba(248, 246, 241, 0.8);
+      border-color: rgba(248, 246, 241, 0.1);
+    }
+
+    .service-card__arrow {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      opacity: 0.5;
+      transition: var(--transition-fast);
+    }
+
+    .service-card:hover .service-card__arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       OPPORTUNITIES GRID
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .opportunities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .opportunity-card {
+      background-color: rgba(248, 246, 241, 0.05);
+      border: 1px solid rgba(197, 168, 108, 0.2);
+      border-radius: 8px;
+      padding: 24px;
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+
+    .opportunity-card:hover {
+      border-color: var(--gold-warm);
+      transform: translateY(-2px);
+    }
+
+    .opportunity-card__badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 4px 12px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--gold-warm);
+      background-color: rgba(197, 168, 108, 0.1);
+      border-radius: 4px;
+    }
+
+    .opportunity-card__blur {
+      padding: 16px 0;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(197, 168, 108, 0.2);
+    }
+
+    .opportunity-card__placeholder {
+      font-size: 20px;
+      color: rgba(248, 246, 241, 0.3);
+      font-family: monospace;
+      filter: blur(4px);
+    }
+
+    .opportunity-card__row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(197, 168, 108, 0.1);
+    }
+
+    .opportunity-card__label {
+      font-size: 13px;
+      color: rgba(248, 246, 241, 0.5);
+    }
+
+    .opportunity-card__value {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--cream);
+    }
+
+    .opportunity-card__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      background-color: var(--gold-warm);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .opportunity-card__btn:hover {
+      background-color: var(--gold-light);
+    }
+
+    .opportunities-cta {
+      text-align: center;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       NETWORK GRID
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .network-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .network-card {
+      padding: 32px;
+      border: 1px solid rgba(26, 42, 58, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      position: relative;
+      background-color: var(--cream);
+    }
+
+    .network-card--featured {
+      background-color: var(--navy-deep);
+    }
+
+    .network-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(26, 42, 58, 0.12);
+    }
+
+    .network-card__type {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      margin-bottom: 12px;
+      display: block;
+      color: var(--gold-warm);
+    }
+
+    .network-card__title {
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .network-card--featured .network-card__title {
+      color: var(--cream);
+    }
+
+    .network-card__desc {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--gray-cool);
+    }
+
+    .network-card--featured .network-card__desc {
+      color: rgba(248, 246, 241, 0.7);
+    }
+
+    .network-card__arrow {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      opacity: 0.5;
+      transition: var(--transition-fast);
+    }
+
+    .network-card:hover .network-card__arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       INSIGHTS GRID
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .insight-card {
+      padding: 32px;
+      background-color: var(--cream);
+      border: 1px solid rgba(26, 42, 58, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .insight-card--featured {
+      grid-column: span 2;
+    }
+
+    .insight-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(26, 42, 58, 0.12);
+      border-color: rgba(197, 168, 108, 0.3);
+    }
+
+    .insight-card__category {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--gold-warm);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .insight-card__title {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .insight-card__excerpt {
+      font-size: 14px;
+      color: var(--gray-cool);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .insight-card__date {
+      font-size: 12px;
+      color: var(--gray-light);
+    }
+
+    @media (max-width: 768px) {
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .insight-card--featured {
+        grid-column: span 1;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       FINAL CTA
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .final-cta {
+      position: relative;
+      padding: 160px 0;
+      background-color: var(--navy-deep);
+      overflow: hidden;
+    }
+
+    .final-cta__overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(197, 168, 108, 0.1) 0%, transparent 70%);
+    }
+
+    .final-cta__content {
+      position: relative;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .final-cta__title {
+      font-size: clamp(36px, 5vw, 56px);
+      color: var(--cream);
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+
+    .final-cta__text {
+      font-size: 18px;
+      color: rgba(248, 246, 241, 0.7);
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .footer {
+      background-color: var(--navy-deep);
+      padding: 80px 0 40px;
+    }
+
+    .footer__top {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 64px;
+      margin-bottom: 48px;
+    }
+
+    .footer__brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .footer__logo-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .footer__logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer__logo-title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gold-warm);
+      letter-spacing: 0.1em;
+    }
+
+    .footer__logo-subtitle {
+      font-size: 8px;
+      color: rgba(248, 246, 241, 0.5);
+      letter-spacing: 0.15em;
+    }
+
+    .footer__tagline {
+      font-size: 15px;
+      color: rgba(248, 246, 241, 0.6);
+      font-style: italic;
+    }
+
+    .footer__nav {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .footer__nav-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-warm);
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .footer__nav-list {
+      list-style: none;
+    }
+
+    .footer__nav-item {
+      font-size: 14px;
+      color: rgba(248, 246, 241, 0.6);
+      padding: 6px 0;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .footer__nav-item:hover {
+      color: var(--gold-warm);
+    }
+
+    .footer__divider {
+      height: 1px;
+      background-color: rgba(248, 246, 241, 0.1);
+      margin-bottom: 32px;
+    }
+
+    .footer__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .footer__legal {
+      font-size: 12px;
+      color: rgba(248, 246, 241, 0.4);
+    }
+
+    .footer__legal-sep {
+      margin: 0 12px;
+    }
+
+    .footer__legal-link {
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .footer__legal-link:hover {
+      color: var(--gold-warm);
+    }
+
+    .footer__address {
+      font-size: 12px;
+      color: rgba(248, 246, 241, 0.4);
+    }
+
+    .footer__disclaimer {
+      font-size: 11px;
+      color: rgba(248, 246, 241, 0.3);
+      line-height: 1.6;
+      max-width: 900px;
+    }
+
+    @media (max-width: 1024px) {
+      .footer__top {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer__nav {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       FLOATING CTA
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .floating-cta {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 900;
+    }
+
+    .floating-cta__btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      background-color: var(--gold-warm);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(197, 168, 108, 0.4);
+      transition: var(--transition-smooth);
+    }
+
+    .floating-cta__btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(197, 168, 108, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .floating-cta {
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       CONTENT PAGES
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .page {
+      padding-top: 100px;
+    }
+
+    .page__header {
+      padding: 80px 0;
+      background-color: var(--navy-deep);
+      text-align: center;
+    }
+
+    .page__tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--gold-warm);
+      margin-bottom: 16px;
+    }
+
+    .page__title {
+      font-size: clamp(36px, 5vw, 56px);
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+
+    .page__subtitle {
+      font-size: 18px;
+      color: rgba(248, 246, 241, 0.7);
+    }
+
+    .page__content {
+      padding: 80px 0;
+    }
+
+    .sub-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .sub-nav-card {
+      padding: 32px;
+      background-color: white;
+      border: 1px solid rgba(26, 42, 58, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .sub-nav-card--featured {
+      border-color: var(--gold-warm);
+      background-color: rgba(197, 168, 108, 0.05);
+    }
+
+    .sub-nav-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(26, 42, 58, 0.12);
+      border-color: var(--gold-warm);
+    }
+
+    .sub-nav-card__number {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(197, 168, 108, 0.3);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .sub-nav-card__title {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      margin-bottom: 12px;
+    }
+
+    .sub-nav-card__desc {
+      font-size: 15px;
+      color: var(--gray-cool);
+      line-height: 1.6;
+    }
+
+    .sub-nav-card__arrow {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      color: var(--gold-warm);
+      opacity: 0.5;
+      transition: var(--transition-fast);
+    }
+
+    .sub-nav-card:hover .sub-nav-card__arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       ANIMATIONS FOR SCROLL
+       ═══════════════════════════════════════════════════════════════════════════ */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════════════
+       PRINT STYLES
+       ═══════════════════════════════════════════════════════════════════════════ */
+    @media print {
+      .floating-cta,
+      .header,
+      .footer {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       HEADER
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <!-- Logo -->
+      <a href="#home" class="header__logo">
+        <svg class="header__logo-icon" viewBox="0 0 100 100" fill="none">
+          <path d="M15 25 H85 L80 30 H20 L15 25Z" fill="#C5A86C"/>
+          <path d="M18 30 V85 H25 V35 H30 V85 H35 V35 H40 V85 H45 V35 H50 V85 H55 V35 H60 V85 H65 V35 H70 V85 H75 V35 H82 V85 H82 V30 H18Z" fill="#C5A86C"/>
+          <path d="M10 85 H90 V92 H10 V85Z" fill="#C5A86C"/>
+          <path d="M15 18 H30 V20 H17 V25 H15 V18Z" fill="#C5A86C" opacity="0.8"/>
+          <path d="M15 10 H25 V12 H17 V18 H15 V10Z" fill="#C5A86C" opacity="0.6"/>
+        </svg>
+        <div class="header__logo-text">
+          <span class="header__logo-title">MINERVA PARTNERS</span>
+          <span class="header__logo-subtitle">MULTICLIENT FAMILY OFFICE</span>
+        </div>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="header__nav">
+        <div class="header__nav-item">
+          <button class="header__nav-link">
+            Ecosistema
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="header__mega-menu">
+            <div class="header__mega-menu-inner">
+              <a href="#ecosistema-idea" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">L'Idea</span>
+                <span class="header__mega-menu-desc">Da dove nasce Minerva Partners</span>
+              </a>
+              <a href="#ecosistema-confederazione" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">La Confederazione</span>
+                <span class="header__mega-menu-desc">Il modello VERITAS e il Codice Minerva</span>
+              </a>
+              <a href="#ecosistema-approccio" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Un Approccio Diverso</span>
+                <span class="header__mega-menu-desc">La regia che valorizza ogni dimensione</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__nav-item">
+          <button class="header__nav-link">
+            Soluzioni
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="header__mega-menu">
+            <div class="header__mega-menu-inner">
+              <a href="#soluzioni-hub" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Minerva Hub</span>
+                <span class="header__mega-menu-desc">Servizi core e regia strategica</span>
+              </a>
+              <a href="#soluzioni-partners" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Partners</span>
+                <span class="header__mega-menu-desc">Eccellenza verticale in prelazione</span>
+              </a>
+              <a href="#soluzioni-friends" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Friends</span>
+                <span class="header__mega-menu-desc">Specialisti senza vincoli di esclusiva</span>
+              </a>
+              <a href="#soluzioni-advisors" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Advisors</span>
+                <span class="header__mega-menu-desc">Originatori di opportunità</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__nav-item">
+          <button class="header__nav-link">
+            Network
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="header__mega-menu">
+            <div class="header__mega-menu-inner">
+              <a href="#network-circle" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Minerva Circle</span>
+                <span class="header__mega-menu-desc">Eventi esclusivi di networking</span>
+              </a>
+              <a href="#network-pointzero" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Point Zero</span>
+                <span class="header__mega-menu-desc">Club riservato su invito</span>
+              </a>
+              <a href="#network-academy" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Academy</span>
+                <span class="header__mega-menu-desc">Next Gen e Gen Exit</span>
+              </a>
+              <a href="#network-clubdeal" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Club Deal</span>
+                <span class="header__mega-menu-desc">Co-investimenti selezionati</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__nav-item">
+          <button class="header__nav-link">
+            A Proposito Di
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="header__mega-menu">
+            <div class="header__mega-menu-inner">
+              <a href="#about-manifesto" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Manifesto</span>
+                <span class="header__mega-menu-desc">La nostra lettera di intenti</span>
+              </a>
+              <a href="#about-team" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Chi Siamo</span>
+                <span class="header__mega-menu-desc">I fondatori di Minerva</span>
+              </a>
+              <a href="#contact" class="header__mega-menu-item">
+                <span class="header__mega-menu-label">Contatti</span>
+                <span class="header__mega-menu-desc">Inizia una conversazione</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header__actions">
+        <button class="header__reserved-btn">Area Riservata</button>
+        <a href="#contact" class="btn btn--primary">
+          Richiedi un Incontro
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="header__menu-toggle" id="menuToggle" aria-label="Menu">
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__group">
+      <div class="mobile-nav__title">Ecosistema</div>
+      <a href="#ecosistema-idea" class="mobile-nav__item">L'Idea</a>
+      <a href="#ecosistema-confederazione" class="mobile-nav__item">La Confederazione</a>
+      <a href="#ecosistema-approccio" class="mobile-nav__item">Un Approccio Diverso</a>
+    </div>
+    <div class="mobile-nav__group">
+      <div class="mobile-nav__title">Soluzioni</div>
+      <a href="#soluzioni-hub" class="mobile-nav__item">Minerva Hub</a>
+      <a href="#soluzioni-partners" class="mobile-nav__item">Partners</a>
+      <a href="#soluzioni-friends" class="mobile-nav__item">Friends</a>
+    </div>
+    <div class="mobile-nav__group">
+      <div class="mobile-nav__title">Network</div>
+      <a href="#network-circle" class="mobile-nav__item">Minerva Circle</a>
+      <a href="#network-clubdeal" class="mobile-nav__item">Club Deal</a>
+    </div>
+    <div class="mobile-nav__group">
+      <div class="mobile-nav__title">A Proposito Di</div>
+      <a href="#about-manifesto" class="mobile-nav__item">Manifesto</a>
+      <a href="#about-team" class="mobile-nav__item">Chi Siamo</a>
+      <a href="#contact" class="mobile-nav__item">Contatti</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    
+    <div class="hero__content">
+      <div class="hero__tag">
+        <div class="gold-line" style="width: 40px;"></div>
+        <span class="hero__tag-text">MULTICLIENT FAMILY OFFICE</span>
+        <div class="gold-line" style="width: 40px;"></div>
+      </div>
+      
+      <h1 class="hero__title">
+        Diamo ordine alla complessità.<br>
+        <span class="hero__title-accent">Abilitiamo valore.</span>
+      </h1>
+      
+      <p class="hero__subtitle">
+        Un ecosistema di eccellenza per famiglie imprenditoriali che cercano<br>
+        visione d'insieme, riservatezza e risultati concreti.
+      </p>
+      
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--primary btn--large">
+          Richiedi un Incontro
+          <svg class="btn__icon" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#why-minerva" class="btn btn--outline btn--large">
+          Scopri l'Ecosistema
+        </a>
+      </div>
+      
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-value">€11T+</span>
+          <span class="hero__stat-label">Ricchezza famiglie italiane</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">70%</span>
+          <span class="hero__stat-label">Imprese familiari senza successione</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">1</span>
+          <span class="hero__stat-label">Ecosistema per dare ordine</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero__scroll">
+      <span>Scorri</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       WHY MINERVA SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="section animate-on-scroll" id="why-minerva">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">PERCHÉ MINERVA</span>
+        <h2 class="section-header__title">Il sistema attuale non funziona.</h2>
+        <p class="section-header__subtitle">
+          Troppi consulenti, nessuna visione d'insieme. Decisioni frammentate, costi triplicati, opportunità perse. Minerva nasce per cambiare questo paradigma.
+        </p>
+      </div>
+      
+      <div class="pillars">
+        <div class="pillar-card">
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"/>
+              <circle cx="24" cy="24" r="8"/>
+              <path d="M24 4v8M24 36v8M4 24h8M36 24h8"/>
+            </svg>
+          </div>
+          <h3 class="pillar-card__title">Visione Globale</h3>
+          <p class="pillar-card__desc">
+            Un unico punto di controllo per patrimonio, azienda e famiglia. Stop alla frammentazione tra 5-7 consulenti che non comunicano.
+          </p>
+        </div>
+        
+        <div class="pillar-card">
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M24 4L44 24L24 44L4 24L24 4z"/>
+              <path d="M24 14L34 24L24 34L14 24L24 14z"/>
+            </svg>
+          </div>
+          <h3 class="pillar-card__title">Interessi Allineati</h3>
+          <p class="pillar-card__desc">
+            Investiamo il nostro capitale accanto al tuo. Se perdiamo, perdiamo insieme. Se vinciamo, vinciamo insieme. Zero conflitti.
+          </p>
+        </div>
+        
+        <div class="pillar-card">
+          <div class="pillar-card__icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M24 4L28 18L44 18L31 27L36 42L24 33L12 42L17 27L4 18L20 18L24 4z"/>
+            </svg>
+          </div>
+          <h3 class="pillar-card__title">Solo Eccellenza</h3>
+          <p class="pillar-card__desc">
+            Selezioniamo partner con criteri rigorosi. Solo i migliori. Solo chi firma il Codice Minerva e ne condivide i valori.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       APPROACH TIMELINE SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="section section--dark animate-on-scroll" id="approach">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">IL NOSTRO APPROCCIO</span>
+        <h2 class="section-header__title">Chiarezza, strategia, esecuzione.</h2>
+        <p class="section-header__subtitle">
+          Non aggiungiamo l'ennesimo consulente. Creiamo una regia che coordina tutti.
+        </p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline__line"></div>
+        
+        <div class="timeline__item visible">
+          <div class="timeline__step">01</div>
+          <div class="timeline__content">
+            <h4 class="timeline__title">Chiarisce il Quadro</h4>
+            <p class="timeline__desc">Comprendiamo e interpretiamo la tua situazione con trasparenza e imparzialità totale.</p>
+          </div>
+        </div>
+        
+        <div class="timeline__item visible">
+          <div class="timeline__step">02</div>
+          <div class="timeline__content">
+            <h4 class="timeline__title">Definisce Cosa Fare</h4>
+            <p class="timeline__desc">Progettiamo il percorso strategico allineato a famiglia, azienda e patrimonio.</p>
+          </div>
+        </div>
+        
+        <div class="timeline__item visible">
+          <div class="timeline__step">03</div>
+          <div class="timeline__content">
+            <h4 class="timeline__title">Esegue il Core</h4>
+            <p class="timeline__desc">Il nostro team interno esegue M&A, Real Estate, Strategy e Wealth Management.</p>
+          </div>
+        </div>
+        
+        <div class="timeline__item visible">
+          <div class="timeline__step">04</div>
+          <div class="timeline__content">
+            <h4 class="timeline__title">Attiva i Partner</h4>
+            <p class="timeline__desc">Quando serve competenza verticale, attiviamo i migliori specialisti del network.</p>
+          </div>
+        </div>
+        
+        <div class="timeline__item visible">
+          <div class="timeline__step">05</div>
+          <div class="timeline__content">
+            <h4 class="timeline__title">Monitora e Ottimizza</h4>
+            <p class="timeline__desc">Supervisione continua, reportistica integrata, adattamento alle evoluzioni.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       SERVICES SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="section animate-on-scroll" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">SOLUZIONI</span>
+        <h2 class="section-header__title">Un ecosistema, non una boutique.</h2>
+        <p class="section-header__subtitle">
+          Quattro livelli di competenza integrati in un unico sistema coordinato.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card service-card--featured">
+          <h3 class="service-card__title">Minerva Hub</h3>
+          <span class="service-card__subtitle">Il Cuore Operativo</span>
+          <ul class="service-card__list">
+            <li class="service-card__item">M&A & Investments</li>
+            <li class="service-card__item">Real Estate Advisory</li>
+            <li class="service-card__item">Strategy Consulting</li>
+            <li class="service-card__item">Wealth Management</li>
+          </ul>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">Partners</h3>
+          <span class="service-card__subtitle">Eccellenza Verticale</span>
+          <ul class="service-card__list">
+            <li class="service-card__item">Servizi Legali</li>
+            <li class="service-card__item">Business Consulting</li>
+            <li class="service-card__item">Energy Management</li>
+            <li class="service-card__item">Digital Services</li>
+          </ul>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">Friends</h3>
+          <span class="service-card__subtitle">Specialisti di Fiducia</span>
+          <ul class="service-card__list">
+            <li class="service-card__item">UHNWI Services</li>
+            <li class="service-card__item">Clienti Esteri</li>
+            <li class="service-card__item">Rischi & Assicurativo</li>
+            <li class="service-card__item">Servizi Bancari</li>
+          </ul>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="service-card">
+          <h3 class="service-card__title">Advisors</h3>
+          <span class="service-card__subtitle">Originatori</span>
+          <ul class="service-card__list">
+            <li class="service-card__item">Deal Sourcing</li>
+            <li class="service-card__item">Opportunità Off-Market</li>
+            <li class="service-card__item">Network Esteso</li>
+            <li class="service-card__item">Segnalazioni Qualificate</li>
+          </ul>
+          <div class="service-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       CLUB DEAL SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="section section--dark animate-on-scroll" id="opportunities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">CLUB DEAL MINERVA</span>
+        <h2 class="section-header__title">Co-investimenti selezionati.</h2>
+        <p class="section-header__subtitle">
+          Operazioni selezionate, strutturate e create con capitale di Minerva. Skin in the game.
+        </p>
+      </div>
+      
+      <div class="opportunities-grid">
+        <div class="opportunity-card">
+          <span class="opportunity-card__badge">CONFIDENTIAL</span>
+          <div class="opportunity-card__blur">
+            <span class="opportunity-card__placeholder">████████████</span>
+          </div>
+          <div class="opportunity-card__details">
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Settore</span>
+              <span class="opportunity-card__value">Manufacturing</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Ticket</span>
+              <span class="opportunity-card__value">€2-5M</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Fase</span>
+              <span class="opportunity-card__value" style="color: #FF9800;">Due Diligence</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Regione</span>
+              <span class="opportunity-card__value">Nord Italia</span>
+            </div>
+          </div>
+          <button class="opportunity-card__btn">
+            Richiedi NDA
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left: 8px;">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="opportunity-card">
+          <span class="opportunity-card__badge">CONFIDENTIAL</span>
+          <div class="opportunity-card__blur">
+            <span class="opportunity-card__placeholder">████████████</span>
+          </div>
+          <div class="opportunity-card__details">
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Settore</span>
+              <span class="opportunity-card__value">Healthcare</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Ticket</span>
+              <span class="opportunity-card__value">€5-10M</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Fase</span>
+              <span class="opportunity-card__value" style="color: #4CAF50;">Execution</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Regione</span>
+              <span class="opportunity-card__value">Centro Italia</span>
+            </div>
+          </div>
+          <button class="opportunity-card__btn">
+            Richiedi NDA
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left: 8px;">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="opportunity-card">
+          <span class="opportunity-card__badge">CONFIDENTIAL</span>
+          <div class="opportunity-card__blur">
+            <span class="opportunity-card__placeholder">████████████</span>
+          </div>
+          <div class="opportunity-card__details">
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Settore</span>
+              <span class="opportunity-card__value">Tech Services</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Ticket</span>
+              <span class="opportunity-card__value">€1-3M</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Fase</span>
+              <span class="opportunity-card__value" style="color: #C5A86C;">Origination</span>
+            </div>
+            <div class="opportunity-card__row">
+              <span class="opportunity-card__label">Regione</span>
+              <span class="opportunity-card__value">Europa</span>
+            </div>
+          </div>
+          <button class="opportunity-card__btn">
+            Richiedi NDA
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left: 8px;">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="opportunities-cta">
+        <a href="#contact" class="btn btn--primary">
+          Esplora le Opportunità
+          <svg class="btn__icon" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       NETWORK SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="section animate-on-scroll" id="network">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">IL NETWORK</span>
+        <h2 class="section-header__title">Relazioni, non transazioni.</h2>
+        <p class="section-header__subtitle">
+          Eventi esclusivi, formazione generazionale e opportunità di investimento per chi condivide i nostri valori.
+        </p>
+      </div>
+      
+      <div class="network-grid">
+        <div class="network-card">
+          <span class="network-card__type">PURE NETWORKING</span>
+          <h3 class="network-card__title">Minerva Circle</h3>
+          <p class="network-card__desc">
+            Eventi strutturati dove clienti, Partner, Friends e ospiti selezionati si incontrano per dialogare, presentare opportunità e costruire relazioni.
+          </p>
+          <div class="network-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="network-card network-card--featured">
+          <span class="network-card__type">EXCLUSIVE CLUB</span>
+          <h3 class="network-card__title">Point Zero</h3>
+          <p class="network-card__desc">
+            Approfondimenti su settori specifici con guest star di alto livello. Solo su invito, per alti meriti. Divieto assoluto di selling.
+          </p>
+          <div class="network-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="#C5A86C" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div class="network-card">
+          <span class="network-card__type">NEXT GEN & GEN EXIT</span>
+          <h3 class="network-card__title">Academy</h3>
+          <p class="network-card__desc">
+            Programmi per il passaggio generazionale consapevole. Trasferimento di conoscenze, relazioni e valori per preservare continuità.
+          </p>
+          <div class="network-card__arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       INSIGHTS SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="section section--light animate-on-scroll" id="insights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">INSIGHTS</span>
+        <h2 class="section-header__title">Pensiero, non rumore.</h2>
+        <p class="section-header__subtitle">
+          Analisi e riflessioni per chi cerca sostanza oltre le mode del momento.
+        </p>
+      </div>
+      
+      <div class="insights-grid">
+        <article class="insight-card insight-card--featured">
+          <span class="insight-card__category">Wealth Planning</span>
+          <h3 class="insight-card__title">Il paradosso imprenditoriale italiano: come 40 anni hanno cambiato tutto</h3>
+          <p class="insight-card__excerpt">
+            Dall'età d'oro degli anni '80 alla complessità di oggi. Perché i margini si sono ridotti e come proteggere il patrimonio costruito.
+          </p>
+          <span class="insight-card__date">Gennaio 2026</span>
+        </article>
+        
+        <article class="insight-card">
+          <span class="insight-card__category">M&A</span>
+          <h3 class="insight-card__title">4.5 milioni di successioni aziendali nei prossimi 5 anni</h3>
+          <p class="insight-card__excerpt">
+            L'opportunità asimmetrica del mercato: capitali disponibili che non incontrano imprese pronte.
+          </p>
+          <span class="insight-card__date">Gennaio 2026</span>
+        </article>
+        
+        <article class="insight-card">
+          <span class="insight-card__category">Strategy</span>
+          <h3 class="insight-card__title">VERITAS: i 7 valori che guidano ogni decisione</h3>
+          <p class="insight-card__excerpt">
+            Visione, Eccellenza, Resilienza, Integrità, Tutela, Allineamento, Salvaguardia.
+          </p>
+          <span class="insight-card__date">Dicembre 2025</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       FINAL CTA SECTION
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <section class="final-cta" id="contact">
+    <div class="final-cta__overlay"></div>
+    <div class="container">
+      <div class="final-cta__content">
+        <div class="gold-line" style="width: 80px;"></div>
+        <h2 class="final-cta__title">
+          Pronto a dare ordine<br>alla complessità?
+        </h2>
+        <p class="final-cta__text">
+          Una conversazione riservata per comprendere la tua situazione.<br>
+          Nessun impegno, nessuna pressione. Solo chiarezza.
+        </p>
+        <a href="mailto:info@minervapartners.it" class="btn btn--primary btn--large">
+          Richiedi un Incontro Riservato
+          <svg class="btn__icon" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg class="footer__logo-icon" viewBox="0 0 100 100" fill="none">
+              <path d="M15 25 H85 L80 30 H20 L15 25Z" fill="#C5A86C"/>
+              <path d="M18 30 V85 H25 V35 H30 V85 H35 V35 H40 V85 H45 V35 H50 V85 H55 V35 H60 V85 H65 V35 H70 V85 H75 V35 H82 V85 H82 V30 H18Z" fill="#C5A86C"/>
+              <path d="M10 85 H90 V92 H10 V85Z" fill="#C5A86C"/>
+            </svg>
+            <div class="footer__logo-text">
+              <span class="footer__logo-title">MINERVA PARTNERS</span>
+              <span class="footer__logo-subtitle">MULTICLIENT FAMILY OFFICE</span>
+            </div>
+          </div>
+          <p class="footer__tagline">Eccellenza senza compromessi.</p>
+        </div>
+        
+        <div class="footer__nav">
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Ecosistema</h4>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">L'Idea</li>
+              <li class="footer__nav-item">La Confederazione</li>
+              <li class="footer__nav-item">Un Approccio Diverso</li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Soluzioni</h4>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">Minerva Hub</li>
+              <li class="footer__nav-item">Partners</li>
+              <li class="footer__nav-item">Friends</li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Network</h4>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">Minerva Circle</li>
+              <li class="footer__nav-item">Point Zero</li>
+              <li class="footer__nav-item">Club Deal</li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Contatti</h4>
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">Manifesto</li>
+              <li class="footer__nav-item">Chi Siamo</li>
+              <li class="footer__nav-item">Contattaci</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer__divider"></div>
+      
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <span>© 2026 Minerva Partners Srl. Tutti i diritti riservati.</span>
+          <span class="footer__legal-sep">|</span>
+          <span class="footer__legal-link">Privacy Policy</span>
+          <span class="footer__legal-sep">|</span>
+          <span class="footer__legal-link">Cookie Policy</span>
+          <span class="footer__legal-sep">|</span>
+          <span class="footer__legal-link">Disclaimer</span>
+        </div>
+        <div class="footer__address">
+          Via Roggia Vignola, 9 — 24047 Treviglio (BG) — Italia
+        </div>
+      </div>
+      
+      <div class="footer__disclaimer">
+        <p>
+          Le informazioni contenute nel presente sito sono fornite esclusivamente a scopo informativo e non costituiscono un'offerta, una sollecitazione, un invito all'investimento, una raccomandazione o un consiglio professionale di natura finanziaria, legale, fiscale, contabile o di altra natura per qualsiasi persona o entità.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       FLOATING CTA
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <div class="floating-cta">
+    <button class="floating-cta__btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">
+      <span>Contattaci</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header--scrolled');
+      } else {
+        header.classList.remove('header--scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('mobile-nav--open');
+      const bars = menuToggle.querySelectorAll('.header__menu-bar');
+      bars[0].style.transform = mobileNav.classList.contains('mobile-nav--open') 
+        ? 'rotate(45deg) translate(5px, 5px)' 
+        : 'none';
+      bars[1].style.opacity = mobileNav.classList.contains('mobile-nav--open') ? '0' : '1';
+      bars[2].style.transform = mobileNav.classList.contains('mobile-nav--open') 
+        ? 'rotate(-45deg) translate(5px, -5px)' 
+        : 'none';
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('mobile-nav--open');
+        const bars = menuToggle.querySelectorAll('.header__menu-bar');
+        bars[0].style.transform = 'none';
+        bars[1].style.opacity = '1';
+        bars[2].style.transform = 'none';
+      });
+    });
+
+    // Scroll animations
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight * 0.85;
+        if (isVisible) {
+          el.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Timeline animation on scroll
+    const timelineItems = document.querySelectorAll('.timeline__item');
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 150);
+        }
+      });
+    }, observerOptions);
+
+    timelineItems.forEach(item => {
+      timelineObserver.observe(item);
+    });
+
+    console.log('Minerva Partners — Multiclient Family Office');
+    console.log('Eccellenza senza compromessi.');
+  </script>
+</body>
+</html>

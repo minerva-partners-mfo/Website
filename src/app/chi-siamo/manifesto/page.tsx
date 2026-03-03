@@ -2,12 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Navigation from "@/components/Navigation";
-
 export default function Manifesto() {
   return (
     <main className="min-h-screen bg-minerva-blue text-white pt-32 pb-20 px-6">
-      <Navigation />
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <img src="/images/time.jpg" alt="" className="w-full h-full object-cover opacity-[0.06] blur-xl" />
+      </div>
       
       <div className="max-w-4xl mx-auto">
         <motion.div
@@ -34,11 +34,11 @@ export default function Manifesto() {
             </p>
             
             <p>
-              In questo scenario, le famiglie imprenditoriali affrontano una complessità crescente, e spesso la risposta è moltiplicare il numero di professionisti, banche, consulenti. Il risultato ottenuto però è: <span className="text-white/90">frammentazione, decisioni incoerenti, assenza di una visione d&apos;insieme</span> e questo determina ancora più insicurezza, che rende inerte l&apos;imprenditore nel da farsi.
+              {"In questo scenario, le famiglie imprenditoriali affrontano una complessità crescente, e spesso la risposta è moltiplicare il numero di professionisti, banche, consulenti. Il risultato ottenuto però è: "}<span className="text-white/90">{"frammentazione, decisioni incoerenti, assenza di una visione d'insieme"}</span>{" e questo determina ancora più insicurezza, che rende inerte l'imprenditore nel da farsi."}
             </p>
 
             <blockquote className="border-l-2 border-minerva-gold pl-8 py-4 my-12 italic text-minerva-gold/90 text-2xl md:text-3xl font-titles">
-              &quot;Ma, il costo dell&apos;immobilità è altissimo: decisioni sbagliate, successioni non pianificate, opportunità perse, patrimoni erosi da inefficienze fiscali e operative.&quot;
+              {"\"Ma, il costo dell'immobilità è altissimo: decisioni sbagliate, successioni non pianificate, opportunità perse, patrimoni erosi da inefficienze fiscali e operative.\""}
             </blockquote>
 
             <p>

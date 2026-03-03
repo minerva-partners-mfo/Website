@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti | Minerva Partners</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header header--scrolled" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <svg class="header__logo-icon" viewBox="0 0 100 100" fill="none">
+          <path d="M15 25 H85 L80 30 H20 L15 25Z" fill="#C5A86C"/>
+          <path d="M18 30 V85 H25 V35 H30 V85 H35 V35 H40 V85 H45 V35 H50 V85 H55 V35 H60 V85 H65 V35 H70 V85 H75 V35 H82 V85 H82 V30 H18Z" fill="#C5A86C"/>
+          <path d="M10 85 H90 V92 H10 V85Z" fill="#C5A86C"/>
+        </svg>
+        <div class="header__logo-text">
+          <span class="header__logo-title">MINERVA PARTNERS</span>
+          <span class="header__logo-subtitle">MULTICLIENT FAMILY OFFICE</span>
+        </div>
+      </a>
+      <div class="header__actions">
+        <a href="contatti.html" class="btn btn--primary">Richiedi un Incontro</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep">/</span>
+        <span class="breadcrumb__current">Contatti</span>
+      </nav>
+      <span class="page-header__tag">INIZIA UNA CONVERSAZIONE</span>
+      <h1 class="page-header__title">Contatti</h1>
+      <p class="page-header__subtitle">Una conversazione riservata per comprendere la tua situazione.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="page-content">
+    <div class="container">
+      <div class="contact-layout">
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+          
+          <div class="contact-block">
+            <h3 class="contact-block__title">Come funziona</h3>
+            <p class="contact-block__text">
+              Compila il form con le informazioni essenziali. Un nostro Equity Partner 
+              ti contatterà entro 24-48 ore per una prima conversazione telefonica riservata, 
+              senza alcun impegno.
+            </p>
+          </div>
+
+          <div class="contact-block">
+            <h3 class="contact-block__title">Per chi è pensato</h3>
+            <p class="contact-block__text">
+              Ci rivolgiamo a famiglie imprenditoriali, HNWI e UHNWI, family office 
+              e professionisti che cercano una regia per coordinare la complessità 
+              del patrimonio familiare e aziendale.
+            </p>
+          </div>
+
+          <div class="contact-block">
+            <h3 class="contact-block__title">Sede</h3>
+            <p class="contact-block__text">
+              <strong>Minerva Partners Srl</strong><br>
+              Via Roggia Vignola, 9<br>
+              24047 Treviglio (BG)<br>
+              Italia
+            </p>
+          </div>
+
+          <div class="contact-block">
+            <h3 class="contact-block__title">Contatti diretti</h3>
+            <p class="contact-block__text">
+              <strong>Email:</strong> info@minervapartners.it<br>
+              <strong>Telefono:</strong> +39 0363 49160
+            </p>
+          </div>
+
+          <div class="contact-trust">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <span>Riservatezza garantita</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12,6 12,12 16,14"/>
+              </svg>
+              <span>Risposta entro 24-48 ore</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>Dati protetti secondo GDPR</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22,4 12,14.01 9,11.01"/>
+              </svg>
+              <span>Nessun impegno richiesto</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form" id="contactForm">
+          <form id="minervaForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" class="form-input" required placeholder="Il tuo nome">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cognome">Cognome *</label>
+                <input type="text" id="cognome" name="cognome" class="form-input" required placeholder="Il tuo cognome">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" required placeholder="La tua email">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="telefono">Telefono</label>
+              <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="Il tuo numero di telefono">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="profilo">Profilo</label>
+              <select id="profilo" name="profilo" class="form-select">
+                <option value="">Seleziona il tuo profilo</option>
+                <option value="imprenditore">Imprenditore / Famiglia imprenditoriale</option>
+                <option value="hnwi">HNWI / UHNWI</option>
+                <option value="family-office">Family Office</option>
+                <option value="professionista">Professionista / Consulente</option>
+                <option value="altro">Altro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="messaggio">Come possiamo aiutarti?</label>
+              <textarea id="messaggio" name="messaggio" class="form-textarea" rows="5" 
+                placeholder="Descrivi brevemente la tua situazione o le tue esigenze..."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              Invia Richiesta
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+
+            <p class="form-disclaimer">
+              Inviando questo form acconsenti al trattamento dei tuoi dati personali secondo la nostra 
+              <a href="privacy.html" style="color: var(--gold-warm);">Privacy Policy</a>. 
+              I tuoi dati saranno utilizzati esclusivamente per rispondere alla tua richiesta.
+            </p>
+          </form>
+
+          <!-- Success State -->
+          <div id="formSuccess" class="form-success" style="display: none;">
+            <div style="width: 64px; height: 64px; background-color: var(--gold-warm); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--navy-deep)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20,6 9,17 4,12"/>
+              </svg>
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 28px; color: var(--navy-deep); margin-bottom: 16px;">
+              Richiesta Ricevuta
+            </h3>
+            <p style="font-size: 16px; color: var(--gray-cool); margin-bottom: 24px;">
+              Grazie per averci contattato. Un nostro Equity Partner ti risponderà entro 24-48 ore.
+            </p>
+            <a href="index.html" class="btn btn--outline-dark">Torna alla Home</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>© 2026 Minerva Partners Srl. Tutti i diritti riservati.</p>
+        <p>Via Roggia Vignola, 9 — 24047 Treviglio (BG) — Italia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission handling
+    document.getElementById('minervaForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // In production, this would send the data to a backend
+      // For now, we'll just show the success message
+      
+      const form = document.getElementById('minervaForm');
+      const success = document.getElementById('formSuccess');
+      
+      // Animate form out
+      form.style.opacity = '0';
+      form.style.transform = 'translateY(-20px)';
+      form.style.transition = 'all 0.3s ease';
+      
+      setTimeout(() => {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        success.style.opacity = '0';
+        success.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+          success.style.opacity = '1';
+          success.style.transform = 'translateY(0)';
+          success.style.transition = 'all 0.4s ease';
+        }, 50);
+      }, 300);
+    });
+  </script>
+
+  <style>
+    .form-success {
+      text-align: center;
+      padding: 48px 24px;
+    }
+  </style>
+
+</body>
+</html>
